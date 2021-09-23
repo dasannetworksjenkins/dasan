@@ -5,7 +5,7 @@ project(gtest_Test VERSION 1.0)
 set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/etc)
 
 
-ADD_EXCUTABLE(whattotest whattotest.cpp)
+ADD_EXECUTABLE(whattotest whattotest.cpp)
 
 if (NOT googletest)
         include(FetchContent)

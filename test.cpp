@@ -1,6 +1,6 @@
 //test.cpp
 
-#include "whattotest.cpp"
+#include "whattotest.h"
 #include <gtest/gtest.h>
 
 TEST(SquaareRootTest, PositiveNos){
@@ -12,9 +12,13 @@ TEST(SquaareRootTest, PositiveNos){
 }
 
 TEST(SquareRootTest, NegativeNos) {
-        ASSERT_EQ(-1.0, squareRoot(-15.0));
+        ASSERT_EQ(15, squareRoot(-15.0));
         ASSERT_EQ(-1.0, squareRoot(-0.2));
 
+}
+
+TEST(SquareRootTest, test) {
+	ASSERT_EQ(11, squareRoot(121));
 }
 
 int main(int argc, char **argv) {
