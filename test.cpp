@@ -12,7 +12,7 @@ TEST(SquaareRootTest, PositiveNos){
 }
 
 TEST(SquareRootTest, NegativeNos) {
-        ASSERT_EQ(15, squareRoot(-15.0));
+        ASSERT_EQ(-1.0, squareRoot(-15.0));
         ASSERT_EQ(-1.0, squareRoot(-0.2));
 
 }
