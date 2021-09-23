@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.14)
 
 project(gtest_Test VERSION 1.0)
 
+set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/etc)
+
+
+ADD_EXCUTABLE(whattotest whattotest.cpp)
 
 if (NOT googletest)
         include(FetchContent)
@@ -23,3 +27,7 @@ add_executable(${PROJECT_NAME} test.cpp)
 target_link_libraries(${PROJECT_NAME} gtest_main)
 add_test(NAME example_test COMMAND ${PROJECT_NAME})
 
+
+install (TARGETS whattotest gtest_Test 
+	RUNTIME DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/etc
+	)
