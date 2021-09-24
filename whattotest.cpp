@@ -7,7 +7,12 @@ int main(void){
 	
 	
 	printf("code add\n");
+	
+	printf("error code add\n"
 
 	return 0;
 
 }
+
+
+
